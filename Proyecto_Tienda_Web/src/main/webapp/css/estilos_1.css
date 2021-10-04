@@ -1,0 +1,134 @@
+body{
+	margin:0;
+	padding:0;
+/* 	background:url(../img/christmas-1911637_960_720.jpg) no-repeat center top; */
+	background-size: cover;
+	font-family: sams-serif;
+	height:100vh;
+}
+.login{
+	width: 400px;
+	height: 450px;
+	
+	color: #385686;
+	top: 20%;
+	left:40%;
+	position: absolute;
+	transform: translate (-50%, -50%);
+	box-sizing: border-box;
+	padding: 30px 70px; 
+}
+.login .icono{
+	width:150px;
+	height:150px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+.form-group label{
+	margin:0;
+	padding:0;
+	font-weight: bold;
+	display:block;
+	color: #000;
+	font-size: 20px;
+}
+.form-group1 label{
+	margin:0;
+	padding:0;
+	font-weight: bold;
+	display:block;
+	color: #000;
+	font-size: 20px;
+}
+.login input{
+	width:100%;
+	margin-bottom:20px;
+}
+.login input[type="text"],
+.login input[type="password"]{
+	border: none;
+	border-bottom: 2px solid #000;
+	background:transparent;
+	outline: none;
+	height: 40px;
+	color: #000;
+	font-size: 16px;
+}
+.login input[type="submit"]{
+	border:none;
+	outline:none;
+	height:30px;
+	width: 120px;
+	color: #000;
+	font-size: 18px;
+	border-radius: 120px;
+}
+.login a{
+	text-decoration:none;
+	font-size: 16px;
+	line-height: 20px;
+	color:#fff;
+}
+.login a:hover{
+	color:#000;
+}
+
+
+
+body{
+	background: url(../img/backgroud.jpg) no-repeat center center fixed;
+	background: cover;
+}
+
+h1{
+	color:white;
+	font:60px;
+	background-color:#00579B;	
+}
+
+.login-img{
+	margin-top: -50px;
+	margin-bottom:35px;
+}
+.login-img img {
+	width: 100px;
+	heigth:100px;
+	
+}
+.main-section{
+	margin:0 auto;
+	margin-top:25%;
+	paddiing:0;
+}
+
+.modal-content{
+	padding-bottom:15px;
+	box-shadow: 0px opx 3px #848484;
+}
+.form-group input{
+	height: 42px;
+	font-size: 18px;
+	padding-left:54px;
+	border-radius:5px;
+}
+.form-group::before{
+	font-family:"Font Awesome \5 Free";
+	position: absolute;
+	left:28;
+	font-size:22px;
+	padding-top:4px;
+}
+.form-group#user-group::before{
+	content: "\f007";
+}
+
+.form-group#password-group::before{
+	content: "\f023";
+}
+
+.footer-bg{
+	background-color:#00579B;
+}
