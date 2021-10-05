@@ -28,11 +28,11 @@ public class Servletlogin extends HttpServlet {
 	}
 	
 	private void iniciarSesion(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nombre = request.getParameter("nombre");
-		String clave = request.getParameter("clave");
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
 
 		ModeloLogin modelo = new ModeloLogin();
-		Login login = modelo.iniciarSesion(nombre, clave);
+		Login login = modelo.iniciarSesion(name, password);
 
 		if (login == null) {
 			request.setAttribute("mensaje", "Error nombre de usuario y/o clave");
@@ -40,7 +40,7 @@ public class Servletlogin extends HttpServlet {
 		} else {
 			HttpSession sesion = request.getSession();
 			sesion.setAttribute("usuario", login);
-			response.sendRedirect("../registerSale.jsp");
+			response.sendRedirect("registerSale.jsp");
 		}
 	}
 	

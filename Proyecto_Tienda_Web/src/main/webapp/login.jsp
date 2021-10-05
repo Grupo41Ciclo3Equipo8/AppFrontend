@@ -26,10 +26,10 @@
 			</div>
 			<form class="col-12 m" action="login?tipo=iniciarSesion" method="POST" >
 				<div class="form-group id="user-group">
-					<input type="text" class="form-control " id="input-id" placeholder="Nombre de usuario"/>	
+					<input required  type="text" name="name" class="form-control " id="input-id" placeholder="Nombre de usuario"/>	
 				</div>
 				<div class="form-group id="password-group">
-					<input type="password" class="form-control" placeholder="Contraseña"/>
+					<input  required  type="password" name="password" class="form-control" placeholder="Contraseña"/>
 				</div>
 				
 				<button type="button" class="btn btn-danger">CANCELAR</button> 

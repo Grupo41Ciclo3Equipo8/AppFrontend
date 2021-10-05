@@ -16,7 +16,7 @@ public class ModeloLogin
 		
 		try {
 			cn = Conexion.getConexion();
-			String sql = "SELECT U.idUsuario, U.nombre, U.clave FROM login U WHERE U.nombre = ? AND U.clave = ?";
+			String sql = "SELECT U.cedula_usuario, U.usuario, U.password FROM usuarios U WHERE U.usuario = ? AND U.password = ?";
 			pstm = cn.prepareStatement(sql);
 			pstm.setString(1, nombre);
 			pstm.setString(2, clave);
