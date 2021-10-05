@@ -1,7 +1,6 @@
 body{
 	margin:0;
 	padding:0;
-/* 	background:url(../img/christmas-1911637_960_720.jpg) no-repeat center top; */
 	background-size: cover;
 	font-family: sams-serif;
 	height:100vh;
@@ -86,7 +85,7 @@ body{
 h1{
 	color:white;
 	font:60px;
-	background-color:#00579B;	
+	
 }
 
 .login-img{
@@ -95,13 +94,13 @@ h1{
 }
 .login-img img {
 	width: 100px;
-	heigth:100px;
+	height:100px;
 	
 }
 .main-section{
 	margin:0 auto;
 	margin-top:25%;
-	paddiing:0;
+	padding:0;
 }
 
 .modal-content{
@@ -113,21 +112,15 @@ h1{
 	font-size: 18px;
 	padding-left:54px;
 	border-radius:5px;
+	
 }
-.form-group::before{
-	font-family:"Font Awesome \5 Free";
-	position: absolute;
-	left:28;
-	font-size:22px;
-	padding-top:4px;
-}
-.form-group#user-group::before{
-	content: "\f007";
+#input-id::placeholder{
+	background-image: url(../img/use_icon.png) no-repeat;
+	background-size: 15px 15px;
+    	
 }
 
-.form-group#password-group::before{
-	content: "\f023";
-}
+
 
 .footer-bg{
 	background-color:#00579B;

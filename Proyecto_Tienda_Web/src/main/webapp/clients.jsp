@@ -29,7 +29,7 @@
 		<nav id="nav">
 				<nav class="navbar navbar-expand-lg navbar-light nav-bg">
 				  <div class="container-fluid">
-				    <a class="navbar-brand" href="#"> Tienda</a>
+				    <a class="navbar-brand" href="#">Tienda</a>
 				    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				        <li class="nav-item">
@@ -110,6 +110,7 @@ JOptionPane.showMessageDialog(null, d+u+c+r+e);
   </tbody>
 </table>
 </div>
+
 <tr>
       <th colspan="2" scope="row"><input type="submit" name="btnins" value="Registrar" class="btn btn-primary" />
         <input type="submit" name="btncon" value="Consultar" class="btn btn-secondary" />
