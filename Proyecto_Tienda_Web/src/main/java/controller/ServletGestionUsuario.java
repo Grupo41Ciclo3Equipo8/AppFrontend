@@ -19,7 +19,7 @@ import model.UsuarioDAO;
 
 //public class ServletGestionUsuario {
 	
-@WebServlet("/ServletGestionUsuario")
+@WebServlet(name= "srvUser",urlPatterns = {"/ServletGestionUsuario"})
 	public class ServletGestionUsuario extends HttpServlet{
 
 		private static final long serialVersionUID = 1L;

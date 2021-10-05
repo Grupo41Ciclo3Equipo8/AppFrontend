@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import entities.Login;
 import model.ModeloLogin;
 
-@WebServlet("/usuario")
+@WebServlet("/login")
 public class Servletlogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -36,18 +36,18 @@ public class Servletlogin extends HttpServlet {
 
 		if (login == null) {
 			request.setAttribute("mensaje", "Error nombre de usuario y/o clave");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		} else {
 			HttpSession sesion = request.getSession();
 			sesion.setAttribute("usuario", login);
-			response.sendRedirect("principal.jsp");
+			response.sendRedirect("../registerSale.jsp");
 		}
 	}
 	
 	private void cerrarSesion(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession sesion = request.getSession();
 		sesion.invalidate();
-		request.setAttribute("mensaje", "Iniciar sesión");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		request.setAttribute("mensaje", "Iniciar sesion");
+		request.getRequestDispatcher("login.jsp").forward(request, response);
 	}
 }

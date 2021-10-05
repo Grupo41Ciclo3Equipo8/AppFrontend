@@ -24,7 +24,7 @@
 			<div class="col-12 login-img">
 			<img src="./img/login-image.png">
 			</div>
-			<form class="col-12 m" action="">
+			<form class="col-12 m" action="login?tipo=iniciarSesion" method="POST" >
 				<div class="form-group id="user-group">
 					<input type="text" class="form-control " id="input-id" placeholder="Nombre de usuario"/>	
 				</div>
@@ -33,7 +33,7 @@
 				</div>
 				
 				<button type="button" class="btn btn-danger">CANCELAR</button> 
-				<button type="button" class="btn btn-primary">ACEPTAR <i class="fas fa-sign-in-alt"></i></button>
+				<button type="submit" class="btn btn-primary">ACEPTAR <i class="fas fa-sign-in-alt"></i></button>
 				
 			
 			</form>
