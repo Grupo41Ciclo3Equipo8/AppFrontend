@@ -29,7 +29,7 @@
 		<nav id="nav">
 				<nav class="navbar navbar-expand-lg navbar-light nav-bg">
 				  <div class="container-fluid">
-				    <a class="navbar-brand" href="#">Menu Tienda</a>
+				    <a class="navbar-brand" href="#"> Tienda</a>
 				    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				        <li class="nav-item">
