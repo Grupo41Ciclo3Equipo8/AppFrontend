@@ -21,7 +21,7 @@
 <div id="main-content">
 		<!-- CAPA CONTENEDORA CABEZOTE WEB -->
 		<header id="header">
-			<!-- <jsp:include page="encabezado.jsp" />-->
+			 <jsp:include page="header.jsp" />
 			Bienvenido ${sessionScope.usuario.nombre}
 		</header>
 		
@@ -123,7 +123,7 @@ JOptionPane.showMessageDialog(null, d+u+c+r+e);
 <footer class="footer-bg" >
   <div class = "container-body">
 <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright GRUPO41"Grupo8"MisionMintic:
+  <div class="footer-copyright text-center py-3">© 2021 Copyright GRUPO41 "Grupo8" MisionMintic:
     <a href="https://misionticueb.myopenlms.net/login/index.php">UniBosque</a>
   </div>
   <!-- Copyright -->
