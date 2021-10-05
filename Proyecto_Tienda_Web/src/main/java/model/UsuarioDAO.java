@@ -1,4 +1,4 @@
-package modelo;
+package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
-import conexion.Conexion;
-import entidad.UsuarioDTO;
-//import sun.util.resources.cldr.ext.CurrencyNames_af_NA;
+
+import connection.Conexion;
+import entities.UsuarioDTO;
 
 public class UsuarioDAO{ 
 

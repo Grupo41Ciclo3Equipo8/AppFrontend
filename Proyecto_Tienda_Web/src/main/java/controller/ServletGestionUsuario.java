@@ -1,4 +1,4 @@
-package controlador;
+package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
-import entidad.UsuarioDTO;
-import modelo.UsuarioDAO;
+import entities.UsuarioDTO;
+import model.UsuarioDAO;
 
 
 

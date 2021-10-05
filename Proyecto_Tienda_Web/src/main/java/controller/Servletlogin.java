@@ -1,4 +1,4 @@
-package controlador;
+package controller;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import entidad.Login;
-import modelo.ModeloLogin;
+import entities.Login;
+import model.ModeloLogin;
 
 @WebServlet("/usuario")
 public class Servletlogin extends HttpServlet {

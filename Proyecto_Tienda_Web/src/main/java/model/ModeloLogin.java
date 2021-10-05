@@ -1,9 +1,10 @@
-package modelo;
+package model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import entidad.Login;
-import conexion.Conexion;
+
+import connection.Conexion;
+import entities.Login;
 
 public class ModeloLogin 
 {

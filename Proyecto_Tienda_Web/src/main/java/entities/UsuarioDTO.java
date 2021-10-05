@@ -1,4 +1,4 @@
-package entidad;
+package entities;
 
 public class UsuarioDTO {
 

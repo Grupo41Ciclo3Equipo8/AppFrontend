@@ -1,4 +1,6 @@
-/conexion/
-/controlador/
-/entidad/
+/controller/
+/entities/
 /modelo/
+/model/
+/conection/
+/connection/
