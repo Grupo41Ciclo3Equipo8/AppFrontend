@@ -24,9 +24,9 @@ public class ModeloLogin
 			
 			while (rs.next()) {
 				login = new Login();
-				login.setIdUsuario(rs.getInt("idUsuario"));
-				login.setNombre(rs.getString("nombre"));
-				login.setClave(rs.getString("clave"));
+				login.setIdUser(rs.getInt("idUsuario"));
+				login.setName(rs.getString("nombre"));
+				login.setName(rs.getString("clave"));
 			}
 			
 		} catch (Exception e) {
