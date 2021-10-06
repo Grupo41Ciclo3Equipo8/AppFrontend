@@ -20,8 +20,8 @@
 
 <div id="main-content">
 <header id="header">
-	<jsp:include page="header.jsp" />
-	Bienvenido ${sessionScope.usuario.nombre}
+	<!--<jsp:include page="header.jsp" />-->
+	<!--Bienvenido ${sessionScope.usuario.nombre}-->
 </header>
 <!-- CAPA CONTENEDORA MENU DE NAVEGACION WEB -->
 	<jsp:include page="./components/principalmenu.jsp" />
@@ -41,65 +41,41 @@ JOptionPane.showMessageDialog(null, d+u+c+r+e);
 }
 %>
 
-<div class= "usuario"">
+<div class= "usuario container"">
+<h5 class="text-center">Formulario de  Registro Usuarios</h5>
 <form action="ServletGestionUsuario" method="post">
 
-<table width="55%" align="center" class="table">
-  <thead>
-    <tr>
-      <th colspan="5" scope="col"><center>
-        <h5>Formulario de  Registro Usuarios</h5></th>
-    </tr>
-  </thead>
-  <tbody>
-    
-    <tr>
-      <th scope="row">Cedula</th>
-      <td>Estado</td>
-      <td>Clave</td>
-      <td width="11%" colspan="2" rowspan="5">&nbsp;</td>
-      </tr>
-    <tr>
-      <th scope="row"><input class="form-control" type="text" name="doc"  value="<%=d%>" placeholder = " # CEDULA" /></th>
-      <td><input class="form-control" type="text" name="est"  value="<%=e%>"placeholder = "ESTADO" /></td>
-      <td><input class="form-control" type="password" name="cla"  value="<%=c%>"placeholder = "PASSWORD" /></td>
-      </tr>
-    <tr>
-      <th width="36%" scope="row">Nombres - Apellidos</th>
-      <td width="28%">Cargo</td>
-      <td width="25%">&nbsp;</td>
-      </tr>
-    <tr>
-      <th scope="row"><input class="form-control" type="text" name="usu"  value="<%=u%>" placeholder = " # NOMBRE COMPLETO" /></th>
-      <td><input class="form-control" type="text" name="rol"  value="<%=r%>"placeholder = "CARGO" /></td>
-      <td>&nbsp;</td>
-      </tr>
-    <tr>
-      <th scope="row">&nbsp;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      </tr>
-  </tbody>
-</table>
-
-
+	<div class="form-group">
+						<label>Cedula*</label> <input required type="text"
+							class="form-control" placeholder="Cedula" />
+					</div>
+					<div class="form-group">
+						<label>Nombre Completo*</label> <input required type="text"
+							class="form-control" placeholder="Ingresa tu nombre" />
+					</div>
+					<div class="form-group">
+						<label>Correo Electronico*</label> <input required type="email"
+							class="form-control" placeholder="Ingresa tu correo electronico" />
+					</div>
+					<div class="form-group">
+						<label>Usuario*</label> <input required type="text"
+							class="form-control" placeholder="Ingresa usurio para ingreso" />
+					</div>
+					<div class="form-group">
+						<label>Contraseña*</label> <input required type="text"
+							class="form-control" placeholder="Ingresa contraseña" />
+					</div>
+					
+				
 </form>
-</div>
-<tr>
-      <th colspan="5" scope="row"><input type="submit" name="btnins" value="Registrar" class="btn btn-primary" />
+
+   <tr>
         <input type="submit" name="btncon" value="Consultar" class="btn btn-secondary" />
+        <th colspan="5" scope="row"><input type="submit" name="btnins" value="Registrar" class="btn btn-primary" />
         <input type="submit" name="btnact" value="Actualizar" class="btn btn-success" />
         <input type="submit" name="btneli" value="Eliminar" class="btn btn-danger" /></th>
     </tr>
-<footer class="footer-bg" >
-  <div class = "container-body">
-<!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright GRUPO41"Grupo8"MisionMintic:
-    <a href="https://misionticueb.myopenlms.net/login/index.php">UniBosque</a>
-  </div>
-  <!-- Copyright -->
-</div>
-</footer>
+<jsp:include page="./components/footer.jsp" />
 </div>
 
 <!-- JavaScript Bundle with Popper -->
