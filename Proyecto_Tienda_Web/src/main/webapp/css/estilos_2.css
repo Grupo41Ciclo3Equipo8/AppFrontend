@@ -1,12 +1,27 @@
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 80%;
-  height: 40px;
-  color: white;
-}
+
 
 .nav-bg{
 	background-color:#00579B; 
 }
+
+.abs-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+.center-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+.center-btn button{
+	margin-left: 15px;
+}
+
+form{
+	margin-right:60px;
+}
+
 
