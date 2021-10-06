@@ -26,38 +26,7 @@
 		</header>
 		
 		<!-- CAPA CONTENEDORA MENU DE NAVEGACION WEB -->
-		<nav id="nav">
-				<nav class="navbar navbar-expand-lg navbar-light nav-bg">
-				  <div class="container-fluid">
-				    <a class="navbar-brand" href="#">Tienda</a>
-				    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				        <li class="nav-item">
-				          <a style="margin-left:10px; border:none" class="btn btn-outline-light" aria-current="page" href="principal.jsp">Inicio</a>
-				        </li>
-				        <li class="nav-item">
-				          <a style="margin-left:10px; border:none" class="btn btn-outline-light" href="Usuarios.jsp">Usuarios</a>
-				        </li>
-				        <li class="nav-item">
-				          <a style="margin-left:10px; border:none" class="btn btn-outline-light" href="Clientes.jsp">Clientes</a>
-				        </li>
-				        <li class="nav-item">
-				          <a style="margin-left:10px; border:none" class="btn btn-outline-light" href="Proveedores.jsp">Proveedores</a>
-				        </li>
-				        <li class="nav-item">
-				          <a style="margin-left:10px; border:none" class="btn btn-outline-light" href="Productos.jsp">Productos</a>
-				        </li>
-				        <li class="nav-item">
-				          <a style="margin-left:10px; border:none" class="btn btn-outline-light" href="RegistrarVenta.jsp">Ventas</a>
-				        </li>
-				        <li class="nav-item">
-				          <a style="margin-left:10px; border:none" class="btn btn-outline-light" href="Reportes.jsp">Reportes</a>
-				        </li>
-				        </ul>
-				    </div>
-				  </div>
-			</nav>
-		</nav>
+		<jsp:include page="./components/principalmenu.jsp" />
 <%
 Conexion con=new Conexion();
 con.getConexion();
@@ -121,16 +90,7 @@ JOptionPane.showMessageDialog(null, d+u+c+r+e);
 </form>
 </div>
         
-<footer class="footer-bg" >
-  <div class = "container-body">
-<!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright GRUPO41 "Grupo8" MisionMintic:
-    <a href="https://misionticueb.myopenlms.net/login/index.php">UniBosque</a>
-  </div>
-  <!-- Copyright -->
-
-</div>
-</footer>
+<jsp:include page="./components/footer.jsp" />
 </div>
 	</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

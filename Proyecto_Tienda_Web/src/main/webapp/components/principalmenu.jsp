@@ -19,8 +19,8 @@
 <div id="main-content">
 		<!-- CAPA CONTENEDORA CABEZOTE WEB -->
 <header id="header">
-	<jsp:include page="header.jsp" />
-	Bienvenido ${sessionScope.usuario.nombre}
+	<!--jsp:include page="header.jsp" />-->
+	
 </header>
 		
 		<!-- CAPA CONTENEDORA MENU DE NAVEGACION WEB -->
@@ -36,25 +36,25 @@
 								href="principal.jsp">Inicio</a></li>
 							<li class="nav-item"><a
 								style="margin-left: 10px; border: none"
-								class="btn btn-outline-light" href="Usuarios.jsp">Usuarios</a></li>
+								class="btn btn-outline-light" href="./users.jsp">Usuarios</a></li>
 							<li class="nav-item"><a
 								style="margin-left: 10px; border: none"
-								class="btn btn-outline-light" href="Clientes.jsp">Clientes</a></li>
+								class="btn btn-outline-light" href="./clients.jsp">Clientes</a></li>
 							<li class="nav-item"><a
 								style="margin-left: 10px; border: none"
-								class="btn btn-outline-light" href="Proveedores.jsp">Proveedores</a>
+								class="btn btn-outline-light" href="./vendors.jsp">Proveedores</a>
 							</li>
 							<li class="nav-item"><a
 								style="margin-left: 10px; border: none"
-								class="btn btn-outline-light" href="Productos.jsp">Productos</a>
+								class="btn btn-outline-light" href="./products.jsp">Productos</a>
 							</li>
 							<li class="nav-item"><a
 								style="margin-left: 10px; border: none"
-								class="btn btn-outline-light" href="RegistrarVenta.jsp">Ventas</a>
+								class="btn btn-outline-light" href="./registerSale.jsp">Ventas</a>
 							</li>
 							<li class="nav-item"><a
 								style="margin-left: 10px; border: none"
-								class="btn btn-outline-light" href="Reportes.jsp">Reportes</a></li>
+								class="btn btn-outline-light" href="./reports.jsp">Reportes</a></li>
 						</ul>
 					</div>
 				</div>

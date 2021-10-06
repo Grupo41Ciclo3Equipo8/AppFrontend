@@ -11,7 +11,7 @@
 <footer >
   <div class = "text-center ">
 <!-- Copyright -->
-  <div class=" text-center text-light ">© 2021 Copyright GRUPO41 "TeamProject-8" MisionMintic
+  <div class=" text-center text-dark ">© 2021 Copyright GRUPO41 "TeamProject-8" MisionMintic
     <a class="text-light" href="https://misionticueb.myopenlms.net/login/index.php">UniBosque</a>
   </div>
   <!-- Copyright -->
