@@ -30,10 +30,7 @@
 					<a class="navbar-brand" href="#">Menu Tienda</a>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item"><a
-								style="margin-left: 10px; border: none"
-								class="btn btn-outline-light" aria-current="page"
-								href="principal.jsp">Inicio</a></li>
+							
 							<li class="nav-item"><a
 								style="margin-left: 10px; border: none"
 								class="btn btn-outline-light" href="./users.jsp">Usuarios</a></li>

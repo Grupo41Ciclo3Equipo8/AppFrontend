@@ -19,8 +19,7 @@
 <div id="main-content">
 		<!-- CAPA CONTENEDORA CABEZOTE WEB -->
 		<header id="header">
-			<jsp:include page="header.jsp" />
-			Bienvenido ${sessionScope.usuario.nombre}
+			
 		</header>
 		
 		<!-- CAPA CONTENEDORA MENU DE NAVEGACION WEB -->

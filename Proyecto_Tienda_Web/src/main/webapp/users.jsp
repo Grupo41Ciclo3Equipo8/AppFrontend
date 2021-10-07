@@ -31,8 +31,7 @@
 
 	<div id="main-content">
 		<header id="header">
-			<!--<jsp:include page="header.jsp" />-->
-			<!--Bienvenido ${sessionScope.usuario.nombre}-->
+			
 		</header>
 		<!-- CAPA CONTENEDORA MENU DE NAVEGACION WEB -->
 		<jsp:include page="./components/principalmenu.jsp" />
