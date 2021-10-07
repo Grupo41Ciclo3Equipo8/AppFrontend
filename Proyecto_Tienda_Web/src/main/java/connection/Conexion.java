@@ -12,7 +12,7 @@ public class Conexion {
 	 private static final String DB_PASSWORD = "";
 	 private static Connection dbConnection = null;
 
-	 public static Connection getConexion() {
+	 public Connection getConexion() {
 	  try {
 	   Class.forName(DB_DRIVER);
 	  } catch (ClassNotFoundException e) {

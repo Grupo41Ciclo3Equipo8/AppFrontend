@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -13,120 +13,96 @@ import entities.UsuarioDTO;
 
 public class UsuarioDAO{ 
 
-	Conexion con=new Conexion();
-	Connection cnn =con.getConexion();
-	PreparedStatement ps;
-	ResultSet rs;
-	UsuarioDTO usu;
-
-	public String insertarusuario(UsuarioDTO us) {
+	Conexion connection = new Conexion();
+	Connection conn = connection.getConexion();
+	PreparedStatement preparedStatement;
+	ResultSet resultSet;
+	UsuarioDTO user;
+	
+	
+	
+	
+	@SuppressWarnings("null")
+	public String create(UsuarioDTO user) {
 		int x;
-		String dat="";
+		String data="";
 		try {
-			usu=consultarusuario(us);
-			if(usu==null) {
-				ps=cnn.prepareStatement("INSERT INTO usuario VALUES(?,?,?,?,?)");
-				ps.setInt(1, us.getDocumento());
-				ps.setString(2, us.getNomusuario());
-				ps.setString(3, us.getClave());
-				ps.setString(4, us.getRol());
-				ps.setString(5, us.getEstado());
-				x=ps.executeUpdate();
+			UsuarioDTO userDto = user;
+			user = consultUser(userDto);
+			if(userDto == null) {
+				preparedStatement=conn.prepareStatement("INSERT INTO usuarios(cedula_usuario, email_usuario, nombre_usuario, password, usuario) VALUES(?,?,?,?,?)");
+				preparedStatement.setInt(1, userDto.getDocument());
+				preparedStatement.setString(2, userDto.getEmail());
+				preparedStatement.setString(3, userDto.getName());
+				preparedStatement.setString(4, userDto.getPassword());
+				preparedStatement.setString(5, userDto.getUser());
+				x=preparedStatement.executeUpdate();
 					if(x>0) {
-						dat="r";
+						data="r";
 					}
 			}	
 			else {
-				dat="nr";
+				data="nr";
 			}
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Error al insertar"+e);
+			System.out.println("Error al insertar" + e);
+			
 			
 		}
 		
 		
-		return dat;
+		return data;
 	}
-
-
-	public  UsuarioDTO consultarusuario(UsuarioDTO us) {
+	
+	
+	
+	public boolean edit(UsuarioDTO user) {
 		
-	try {
-		ps=cnn.prepareStatement("SELECT * FROM usuario WHERE documento=?");
-		ps.setInt(1, us.getDocumento());
-		rs=ps.executeQuery();
-		if(rs.next()) {
-		   usu=new UsuarioDTO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
-					
-		}
-		
-		
-	} catch (SQLException e) {
-		
-		e.printStackTrace();
-	}	
-		
-	return usu;
+		return true;
 	}
-
-
-
-	public int eliminar(UsuarioDTO us) {
+	
+    public boolean delete(int document) {
 		
-		int x=0;
-	  try {
-		ps=cnn.prepareStatement("DELETE FROM usuario WHERE documento=? ");
-		ps.setInt(1, us.getDocumento());
-		x=ps.executeUpdate();
-		
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		return true;
 	}
-	  
-	 return x; 	
-	}
+    
+    public List<UsuarioDTO> getAll() {
 		
+		return null;
+	}
+    
+    public UsuarioDTO getById(int document) {
+		
+		return null;
+	}
+    
+    public  UsuarioDTO consultUser(UsuarioDTO us) {
+		
+    	try {
+    		preparedStatement=conn.prepareStatement("SELECT * FROM usuarios WHERE cedula_usaurio = ?");
+    		preparedStatement.setInt(1, user.getDocument());
+    		resultSet=preparedStatement.executeQuery();
+    		if(resultSet.next()) {
+    		   user=new UsuarioDTO(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5));
+    					
+    		}
+    		
+    		
+    	} catch (SQLException e) {
+    		
+    		e.printStackTrace();
+    	}	
+    		
+    	return user;
+    	}
+	
+	
+	
+	
+	
+	
 
-	public boolean actualizar(UsuarioDTO us) {
-		boolean dat=false;
-		JOptionPane.showMessageDialog(null, "dao"+us.getDocumento());
-		JOptionPane.showMessageDialog(null, us.getNomusuario());
-		int x;
-		try {
-			ps=cnn.prepareStatement("UPDATE usuario SET nomusuario=?,clave=?,rol=?,estado=? WHERE documento=?");
-		    ps.setString(1, us.getNomusuario());
-		    ps.setString(2, us.getClave());
-		    ps.setString(3, us.getRol());
-		    ps.setString(4, us.getEstado());
-		    ps.setInt(5, us.getDocumento());
-		    x=ps.executeUpdate();
-		    if(x>0) {
-		    	dat=true;
-		    }
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "ERROR AL ACTUALIZAR"+e);
-		}
-		
-		return dat;	
-	}
-	public ArrayList<UsuarioDTO> consultar(){
-		ArrayList<UsuarioDTO> lista=new  ArrayList<UsuarioDTO>();
-		try {
-			ps=cnn.prepareStatement("SELECT * FROM usuario");
-			rs=ps.executeQuery();
-			while(rs.next()) {
-				usu=new UsuarioDTO(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
-			   lista.add(usu);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return lista;
-	}
+	
 
 
 	   

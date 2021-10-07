@@ -2,11 +2,11 @@ package entities;
 
 public class UsuarioDTO {
 
-	 private int documento;
-	 private String nomusuario;
-	 private String clave;
-	 private String rol;
-	 private String estado;
+	 private int document;
+	 private String email;
+	 private String name;
+	 private String password;
+	 private String user;
 	/**
 	 * @param documento
 	 * @param nomusuario
@@ -14,53 +14,96 @@ public class UsuarioDTO {
 	 * @param rol
 	 * @param estado
 	 */
-	public UsuarioDTO(int documento, String nomusuario, String clave, String rol, String estado) {
+
+	
+	public UsuarioDTO(int document, String email, String name, String password, String user) {
 		super();
-		this.documento = documento;
-		this.nomusuario = nomusuario;
-		this.clave = clave;
-		this.rol = rol;
-		this.estado = estado;
+		this.document = document;
+		this.email = email;
+		this.name = name;
+		this.password = password;
+		this.user = user;
 	}
 	
-	//metodos retorno. metodos getter y met setter.
+	
 
-public UsuarioDTO(int documento) {
-		this.documento = documento;
+	public UsuarioDTO() {
 		
-}
+	}
+
+
+
+	public int getDocument() {
+		return document;
+	}
+
+
+
+	public void setDocument(int document) {
+		this.document = document;
+	}
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+
+	public String getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "UsuarioDTO [document=" + document + ", email=" + email + ", name=" + name + ", password=" + password
+				+ ", user=" + user + "]";
+	}
+
 
 	
-	public int getDocumento() {
-		return documento;
-	}
-	public void setDocumento(int documento) {
-		this.documento = documento;
-	}
-	public String getNomusuario() {
-		return nomusuario;
-	}
-	public void setNomusuario(String nomusuario) {
-		this.nomusuario = nomusuario;
-	}
-	public String getClave() {
-		return clave;
-	}
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-	public String getRol() {
-		return rol;
-	}
-	public void setRol(String rol) {
-		this.rol = rol;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+	
+
+
 	 
 }
  
