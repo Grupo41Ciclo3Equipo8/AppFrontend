@@ -13,7 +13,7 @@
 	rel="stylesheet"
 	integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
 	crossorigin="anonymous">
-<title>USUARIOS</title>
+<title>Clientes</title>
 <!--  <link rel="stylesheet" href="css/estilos_1.css">-->
 <link rel="stylesheet" href="css/estilos_2.css" />
 <link rel="stylesheet"
